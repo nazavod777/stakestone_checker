@@ -7,5 +7,5 @@ import (
 
 var AccountsList []types.AccountData
 var Clients []*fasthttp.Client
-var TargetProgress int
-var CurrentProgress int
+var TargetProgress = 0
+var CurrentProgress = 0
