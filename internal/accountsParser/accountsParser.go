@@ -19,7 +19,7 @@ func parseBalance(accountData types.AccountData) float64 {
 
 		req := fasthttp.AcquireRequest()
 
-		req.SetRequestURI(fmt.Sprintf("https://airdrop.stakestone.io/backend/airdrop/credentials?walletAddress=%s",
+		req.SetRequestURI(fmt.Sprintf("https://airdrop.stakestone.io/api/credentials?walletAddress=%s&batchId=0",
 			strings.ToLower(accountData.AccountAddress.String())))
 		req.Header.Set("accept", "*/*")
 		req.Header.Set("accept-language", "ru,en;q=0.9,vi;q=0.8,es;q=0.7,cy;q=0.6")
